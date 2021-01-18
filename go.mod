@@ -1,4 +1,4 @@
-module github.com/cdutwhu/dev-nrt-ingest
+module github.com/nsip/dev-nrt-ingest
 
 go 1.15
 

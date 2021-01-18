@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/cdutwhu/dev-nrt-ingest/store"
+	"github.com/nsip/dev-nrt-ingest/store"
 	"github.com/cdutwhu/gotil/misc"
 	xt "github.com/cdutwhu/xml-tool"
 )
