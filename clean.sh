@@ -9,3 +9,4 @@ for f in $(find ./ -name '*.log' -or -name '*.doc'); do rm $f; done
 rm -rf ./file/*.json
 rm -rf ./db/*
 rm -f rrd.xml sif.xml
+rm -f err*.json err*.xml

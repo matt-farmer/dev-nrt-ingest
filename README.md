@@ -40,3 +40,10 @@ time: 5.7s
 
 with bar, store: file
 time: 7.3s
+
+### others
+
+For the best performance but without type conversion, use `github.com/cdutwhu/xml-tool v0.1.18`.
+And refer to `commit 9d4aaca732d132266cf8c52001f3ff1119dc0cb7`
+
+Need type conversion as per SIF SPEC? at least use `github.com/cdutwhu/xml-tool v0.1.23`.

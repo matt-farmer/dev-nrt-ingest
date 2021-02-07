@@ -67,9 +67,27 @@ func main() {
 		"xmlns:xsi",
 		"xmlns",
 	)
-	xt.SetSuffix4List(`List`)
+	// xt.SetSuffix4List(`List`)    // xml-tool v0.1.18
+	// xt.SetListPathSuffix(`List`) // xml-tool v0.1.23+
 	xt.SetAttrPrefix(attrPrefix)
 	xt.SetContAttrName(contAttrName)
+
+	if err := xt.SetPathByFile("LIST", "./x2j-info/LIST.txt", "listSIF347", true, '/'); err != nil {
+		panic(err)
+	}
+	if err := xt.EnableListPath("listSIF347"); err != nil {
+		panic(err)
+	}
+
+	if err := xt.SetPathByFile("TYPE", "./x2j-info/BOOLEAN.txt", "typeSIF347", true, '/'); err != nil {
+		panic(err)
+	}
+	if err := xt.SetPathByFile("TYPE", "./x2j-info/NUMERIC.txt", "typeSIF347", true, '/'); err != nil {
+		panic(err)
+	}
+	if err := xt.EnableNonStrPath("typeSIF347"); err != nil {
+		panic(err)
+	}
 
 	fPf("[%s] - [%d] elements saved into [%s]\n", *xmlPathPtr, scan(*xmlPathPtr, true, *asyncPtr, ingest), *storeTypePtr)
 }
